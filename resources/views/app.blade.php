@@ -11,6 +11,7 @@
 <body>
 @inertia
 
+@routes
 @vite('resources/js/app.ts')
 </body>
 </html>

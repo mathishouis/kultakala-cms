@@ -17,3 +17,8 @@ use Inertia\Inertia;
 Route::get('/', function () {
     return Inertia::render("Home");
 });
+
+Route::post('/login', function () {
+    sleep(3);
+    // temporary
+})->name('login');

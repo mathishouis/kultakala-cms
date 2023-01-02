@@ -2,10 +2,12 @@
     <vertical-card class="hotel-promo" title="Welcome to Habbo Hotel">
         <div class="hotel-promo__drape"></div>
         <div class="hotel-promo__enter-button"></div>
+        <div class="hotel-promo__background"></div>
     </vertical-card>
     <vertical-card class="hotel-about" title="About Habbo Hotel">
         <div class="hotel-about__text">
             <p>Habbo Hotel is a chill-out place where you can hang out with your friends. Guests are represented in the hotel by a personal figure called Habbo. This hotel is primarily for young people in the UK, but everyone is welcome.</p>
+            <primary-button>Join the hotel</primary-button>
         </div>
         <div class="hotel-about__image"></div>
     </vertical-card>
@@ -23,12 +25,14 @@
     import { defineComponent } from 'vue';
     import PageLayout from './layout/PageLayout.vue';
     import VerticalCard from '../common/VerticalCard.vue';
+    import PrimaryButton from "../common/PrimaryButton.vue";
 
     export default defineComponent({
         name: 'Home',
         layout: PageLayout,
         components: {
-            VerticalCard
+            VerticalCard,
+            PrimaryButton
         }
     });
 </script>
@@ -43,6 +47,7 @@
             top: 0;
             left: 0;
             background-image: url(@images/reception_drape.png);
+            z-index: 1;
         }
         &__enter-button {
             width: 105px;
@@ -53,6 +58,16 @@
             bottom: 0;
             right: 0;
             cursor: pointer;
+            z-index: 1;
+        }
+        &__background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-image: url(https://stijnlangezaal.nl/habbo-view/assets/uk/floor.png);
+            background-color: #6cadcc;
+            background-position: bottom right;
+            z-index: 0;
         }
     }
     .hotel-about {
@@ -68,6 +83,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            align-items: self-start;
             * {
                 color: #ADADAD;
             }
@@ -95,6 +111,7 @@
             display: flex;
             flex-direction: column;
             gap: 10px;
+            align-items: self-start;
             * {
                 color: #ADADAD;
             }

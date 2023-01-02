@@ -5,6 +5,7 @@
         </div>
         <div class="page__column-2">
             <login-form/>
+            <news-list/>
         </div>
     </div>
 </template>
@@ -12,11 +13,13 @@
 <script lang="ts">
     import { defineComponent } from 'vue';
     import LoginForm from "../form/LoginForm.vue";
+    import NewsList from "../home/NewsList.vue";
 
     export default defineComponent({
         name: 'PageLayout',
         components: {
-            LoginForm
+            LoginForm,
+            NewsList
         }
     });
 </script>

@@ -1,7 +1,7 @@
 <template>
     <div class="vertical-card">
         <div class="vertical-card__header">
-            <div class="vertical-card__header--title">
+            <div class="vertical-card__header--title" v-if="title">
                 {{ title }}
             </div>
         </div>
