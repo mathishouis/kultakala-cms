@@ -31,6 +31,15 @@ export default defineConfig({
                 find: '@js', replacement: path.resolve(__dirname, 'resources/js'),
             },
             {
+                find: '@views', replacement: path.resolve(__dirname, 'resources/views'),
+            },
+            {
+                find: '@fonts', replacement: path.resolve(__dirname, 'resources/fonts'),
+            },
+            {
+                find: '@images', replacement: path.resolve(__dirname, 'resources/images'),
+            },
+            {
                 find: '@vendor', replacement: path.resolve(__dirname, 'vendor'),
             }
         ],
