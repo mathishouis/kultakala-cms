@@ -4,16 +4,20 @@
             <slot/>
         </div>
         <div class="page__column-2">
-            xD
+            <login-form/>
         </div>
     </div>
 </template>
 
 <script lang="ts">
     import { defineComponent } from 'vue';
+    import LoginForm from "../form/LoginForm.vue";
 
     export default defineComponent({
-        name: 'PageLayout'
+        name: 'PageLayout',
+        components: {
+            LoginForm
+        }
     });
 </script>
 

@@ -11,8 +11,10 @@
     image-rendering: pixelated;
     font-size: 9px;
     -webkit-font-smoothing: subpixel-antialiased;
+    -webkit-filter: blur(0);
     transform: translateZ(0);
     backface-visibility: hidden;
+
 }
 
 html, body {

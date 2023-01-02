@@ -13,7 +13,7 @@
         <div class="hotel-installation__text">
             <b>There is nothing to install</b>
             <p>Habbo Hotel just requires an internet connection and nothing else. There is no software to install in order to access the hotel.</p>
-            <img src="@images/scuti_icon.png">
+            <img src="@images/scuti_icon.png" width="89" height="31">
         </div>
         <div class="hotel-installation__image"></div>
     </vertical-card>

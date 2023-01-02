@@ -1,14 +1,14 @@
 <template>
-    <div class="vertical-card">
-        <div class="vertical-card__header">
-            <div class="vertical-card__header--title">
+    <div class="horizontal-card">
+        <div class="horizontal-card__header">
+            <div class="horizontal-card__header--title">
                 {{ title }}
             </div>
         </div>
-        <div class="vertical-card__content">
+        <div class="horizontal-card__content">
             <slot/>
         </div>
-        <div class="vertical-card__frame">
+        <div class="horizontal-card__frame">
         </div>
     </div>
 </template>
@@ -17,7 +17,7 @@
     import { defineComponent } from 'vue';
 
     export default defineComponent({
-        name: 'VerticalCard',
+        name: 'HorizontalCard',
         props: {
             title: String
         }
@@ -26,12 +26,11 @@
 
 <style lang="scss" scoped>
 
-    .vertical-card {
+    .horizontal-card {
         position: relative;
-
         &__header {
-            height: 100%;
-            width: 29px;
+            height: 29px;
+            width: 100%;
             position: absolute;
             z-index: 2;
             &--title {
@@ -44,27 +43,23 @@
                 white-space: nowrap;
                 position: absolute;
                 padding: 3px 5px;
-                transform: rotate(-90deg);
-                transform-origin: left top;
-                bottom: -14px;
+                bottom: 5px;
                 left: 5px;
             }
         }
 
         &__content {
-            position: absolute;
-            width: calc(100% - 29px);
-            height: 100%;
-            background-color: red;
-            left: 29px;
-            z-index: 0;
-            border-radius: 0 11px 11px 0;
-            overflow: hidden;
+            width: 100%;
 
+            background-color: #262626;
+            margin-top: 29px;
+            z-index: 0;
+            border-radius: 0 0 11px 11px;
+            overflow: hidden;
         }
 
         &__frame {
-            border-image: url(@images/frames/frame_1.png) 29 29 29 29 fill;
+            border-image: url(@images/frames/frame_3.png) 29 29 29 29 fill;
             border-top: 29px solid transparent;
             border-left: 29px solid transparent;
             border-bottom: 29px solid transparent;
